@@ -1,5 +1,3 @@
----
-
 ## **Project Installation Instructions**
 
 ### **1\. Deploy the VPS**
@@ -41,7 +39,6 @@ Install and configure UFW to allow essential traffic (e.g., SSH):
 
  sudo ufw allow OpenSSH  
 sudo ufw enable  
----
 
 ### **2\. Set Up the Website**
 
@@ -66,7 +63,6 @@ Obtain an SSL certificate:
 
 * Follow the prompts to set up HTTPS for your domain.
 
----
 
 ### **3\. Connect the Website to a Domain**
 
@@ -82,7 +78,6 @@ Value: \[Your VPS IP Address\]
    * Wait for the DNS changes to propagate (may take a few hours).  
    * Test your domain by visiting `http://yourdomain.com` in a browser.
 
----
 
 ### **4\. Configure the Git Repository**
 
@@ -91,7 +86,6 @@ Value: \[Your VPS IP Address\]
 Use SSH to clone the repository containing your website files:  
  git clone git@github.com:yourusername/yourrepository.git /var/www/html
 
----
 
 ### **5\. Automate Updates with a Bash Script**
 
@@ -110,14 +104,12 @@ Open the crontab editor:
 Add the following line to execute the script every minute:  
  \* \* \* \* \* /path/to/update\_website.sh \>\> /var/log/update\_website.log 2\>&1
 
----
 
 ### **6\. Test the Setup**
 
 1. Push changes to the repository and verify that the website updates automatically within a minute.  
 2. Visit the website using your domain to ensure it's live and functioning.
 
----
 
 ### **Congrats\!**
 
